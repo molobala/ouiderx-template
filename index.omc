@@ -1,0 +1,24 @@
+<template>
+  <root>
+    <appbar slot="appBar">
+      <text slot="title">
+        Im the title
+      </text>
+    </appbar>
+    <column slot="body" main-axis-size="max" cross-axis-alignment="start">
+      <card elevation="12" margin.top="20" margin.bottom="20">
+        <column cross-axis-alignment="start">
+            This is a text {{THIS['name']}}
+            <login></login>
+            <sugu-balance></sugu-balance>
+        </column>
+      </card>
+    </column>
+  </root>
+</template>
+
+<script>
+    import login from './src/login.omc'
+    THIS['name'] = "molo"
+    myFunction("")
+</script>

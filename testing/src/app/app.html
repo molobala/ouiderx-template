@@ -1,0 +1,31 @@
+<ion-app>
+<ion-header>
+  <ion-toolbar mode="ios">
+      <ion-segment slot="start" mode="ios" value="ios" >
+        <ion-segment-button value="ios">
+          <ion-label>iOS</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="md">
+          <ion-label>Android</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+      <ion-buttons slot="end">
+        <ion-select interface="popover"  multiple="false"
+          placeholder="Select">
+          <ion-select-option value="fr">FR</ion-select-option>
+          <ion-select-option value="en">EN</ion-select-option>
+        </ion-select>
+        <ion-button (click)="showThemeChoose()">
+          <ion-icon slot="icon-only" [name]="theme === 'LIGHT' ? 'sunny': 'moon'"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="preview">
+        @if (toPreview()) {
+          <oui-ion-page  [page]="toPreview()" [mode]="segment"></oui-ion-page>
+        }
+      </div>
+</ion-content>
+</ion-app>

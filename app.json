@@ -1,0 +1,13 @@
+{
+    "name": "Example",
+    "version": "1.0.0",
+    "entry": "index.omc",
+    "dependencies": {
+    },
+    "assets": [
+        {
+            "from": "src/assets",
+            "to": "assets"
+        }
+    ]
+}

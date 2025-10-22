@@ -1,0 +1,31 @@
+<template>
+    <container>
+        <column>
+            <center>
+                <image fit="cover" url="${localAsset('assets/logo.png')}"></image>
+            </center>
+            <container>
+                Your first
+                name
+            </container>
+            <container>
+                Your password
+            </container>
+            
+            <button prop.key="Heyy" fill="outline" background-color="#FFDDDD" size=20 text="Hello mini app">
+                <script name="click_event">
+                    a = "Molo"
+                    THIS["variable"] = ""
+                    alert("Molobala")
+                </script>
+                <script name="disabledIf">
+                    getState('name') === '' || getState('password') === ''
+                </script>
+            </button>
+        </column>
+    </container>
+</template>
+
+<script>
+    THIS["variable"] = "Value"
+</script>

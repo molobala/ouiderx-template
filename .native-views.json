@@ -1,0 +1,11 @@
+
+[
+    {
+        "name": "SuguBalance",
+        "properties": [
+            {"name": "showTelco", "type": "boolean", "default": false},
+            {"name": "showOmy", "type": "boolean", "default": false},
+            {"name": "format", "type": "text"}
+        ]
+    }
+]
