@@ -6,3 +6,4 @@ testing/public/app/
 
 .DS_Store
 Thumbs.db
+.modules/
