@@ -1,6 +1,5 @@
-import { Component, inject, OnInit, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { IonApp, IonIcon, IonToolbar, IonSegment, IonSegmentButton, IonLabel, IonButtons, IonButton, IonSelect, IonContent, IonSelectOption, IonTitle, IonHeader } from '@ionic/angular/standalone';
+import { Component, OnInit, signal } from '@angular/core';
+import { IonApp, IonContent } from '@ionic/angular/standalone';
 import { OUIIon, OUIIonPageRender, UIPage } from 'oui-ion';
 import * as allIcons from 'ionicons/icons';
 import { addIcons } from 'ionicons';
@@ -8,7 +7,7 @@ import {MEvento} from 'mevento'
 
 @Component({
   selector: 'app-root',
-  imports: [IonHeader, IonTitle, IonContent, IonButton, IonButtons, IonLabel, IonSegmentButton, IonSegment, IonToolbar, IonIcon, IonSelect, IonSelectOption, IonApp, OUIIonPageRender],
+  imports: [IonContent, IonApp, OUIIonPageRender],
   templateUrl: './app.html',
   styleUrl: './app.css',
   standalone: true,
@@ -28,11 +27,13 @@ export class App implements OnInit{
   theme = 'LIGHT';
   toPreview = signal<UIPage|undefined>(undefined);
   segment: 'ios' | 'md' = 'ios'
+  errors = signal<string | null>(null);
   ngOnInit(): void {
+    this.loadErrors()
     this.ouiIon.settup()
     MEvento.register('localAsset', (args) => {
       const url = args[0];
-      return `${window.location.protocol}/app/${url}`
+      return `${window.location.protocol}//${window.location.host}/app/${url}`
     })
     this.ouiIon.pagesResolver = {
       resolve: async (code, localePage: boolean) => {
@@ -56,16 +57,17 @@ export class App implements OnInit{
       console?.log('toPreview::::::', this.toPreview);
     })
   }
-
+  async loadErrors() {
+    try {
+      const res = await fetch('/app/.errors.txt')
+      if( res.status === 200) {
+        this.errors.set(await res.text())
+      }
+    } catch (error) {
+      this.errors.set(null)
+    }
+  }
   showThemeChoose() {
     this.theme = this.theme == 'LIGHT' ? 'DARK' : 'LIGHT';
-  }
-  languageChanged() {
-    // const p = this.toPreview;
-    // // this.ouiIon.setLocale(this.language);
-    // this.toPreview = undefined;
-    // setTimeout(() => {
-    //   this.toPreview = p;
-    // }, 200);
   }
 }

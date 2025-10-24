@@ -1,0 +1,13 @@
+<ion-app>
+
+<ion-content>
+  <div class="preview">
+    @if (toPreview()) {
+      <oui-ion-page  [page]="toPreview()" [mode]="segment"></oui-ion-page>
+    }
+  </div>
+  @if (errors()) {
+    <div class="errors" style="position: fixed; top: 20px; left: 0px; right: 0px; color: red; background-color: aliceblue; max-height: 80%; overflow-y: scroll;z-index: 1000; padding: 2px; font-size: 0.8em;">{{errors()}}</div>
+  }
+</ion-content>
+</ion-app>

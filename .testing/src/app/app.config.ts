@@ -13,7 +13,7 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withFetch()),
     provideIonicAngular({backButtonIcon: 'chevron-back'}),
     provideBrowserGlobalErrorListeners(),
-    provideZonelessChangeDetection(),
+    // provideZonelessChangeDetection(),
     provideRouter(routes),
     provideOUIIon({
       multiMediaServerURL: '',
