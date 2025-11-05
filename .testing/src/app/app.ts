@@ -45,7 +45,8 @@ export class App implements OnInit{
             console.error(resp.text())
             return null
           }
-          const page = UIPage.parse({code, name: code, version: '1.0.0', build: 1 ,uiData: JSON.stringify(await resp.json())})
+          const app = this.toPreview()
+          const page = new UIPage({code, name: code, version: app?.version ?? '1.0.0', build: 1 ,uiData: JSON.stringify(await resp.json()), translation: app?.translation ?? {} })
           console.log('Page:::' + code, page)
           return page
         }
