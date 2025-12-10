@@ -9,6 +9,7 @@
         {
             "from": "src/assets",
             "to": "assets"
-        }
+        },
+        { "from": "translation.json", "to": "./translation.json"}
     ]
 }
