@@ -3,7 +3,7 @@
 <ion-content>
   <div class="preview">
     @if (toPreview()) {
-      <oui-ion-page  [page]="toPreview()" [mode]="segment"></oui-ion-page>
+      <oui-ion-page  [page]="toPreview()" [mode]="segment()"></oui-ion-page>
     }
   </div>
   @if (errors()) {

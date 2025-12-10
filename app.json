@@ -2,6 +2,7 @@
     "name": "Example",
     "version": "1.0.0",
     "entry": "index.omc",
+    "translation": "translation.json",
     "dependencies": {
     },
     "assets": [
