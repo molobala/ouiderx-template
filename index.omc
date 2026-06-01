@@ -1,24 +1,62 @@
 <template>
-  <root>
-    <appbar slot="appBar">
-      <text slot="title">
-        Im the title
+  <root background-color="#F6F7FB" scrollable="true" floating-action-button-location="endFloat">
+    <appbar slot="appBar" hide-back-button="true" center-title="false" background-color="#FE9800">
+      <text slot="title" style.font-size="18" style.font-weight="700" color="#FFFFFF">
+        {{THIS['appTitle']}}
       </text>
+      <ion-icon slot="actions" data="notifications-outline" color="#FFFFFF" size="22">
+        <script name="click_event">
+          alert("No new notification")
+        </script>
+      </ion-icon>
     </appbar>
-    <column slot="body" main-axis-size="max" cross-axis-alignment="start">
-      <card elevation="12" margin.top="20" margin.bottom="20">
-        <column cross-axis-alignment="start">
-            This is a text {{THIS['name']}}
-            <login></login>
-            <sugu-balance></sugu-balance>
-        </column>
-      </card>
+
+    <column slot="body" main-axis-size="max" cross-axis-alignment="center">
+      <hero-card>
+        <script name="input">
+          {
+            customerName: THIS["customerName"],
+            accountStatus: THIS["accountStatus"],
+            balance: THIS["balance"],
+            currency: THIS["currency"]
+          }
+        </script>
+      </hero-card>
+      <quick-actions isolated="false"></quick-actions>
+      <account-overview isolated="false"></account-overview>
+      <transfer-form isolated="false"></transfer-form>
+      <activity-feed></activity-feed>
+      <host-integration></host-integration>
     </column>
+
+    <o-button
+      slot="floatingActionButton"
+      text="Scan"
+      icon="qr-code-outline"
+      icon-slot="start"
+      fill="solid"
+      background-color="#FE9800"
+      foreground-color="#FFFFFF"
+      padding="12,14,12,14">
+      <script name="click_event">
+        alert("Wire this action to a scanner host function in .host-functions.json")
+      </script>
+    </o-button>
   </root>
 </template>
 
 <script>
-    import login from './src/login.omc'
-    THIS['name'] = "molo"
-    myFunction("")
+  import heroCard from "./src/components/hero-card.omc"
+  import quickActions from "./src/components/quick-actions.omc"
+  import accountOverview from "./src/components/account-overview.omc"
+  import transferForm from "./src/components/transfer-form.omc"
+  import activityFeed from "./src/components/activity-feed.omc"
+  import hostIntegration from "./src/components/host-integration.omc"
+
+  THIS["appTitle"] = "OUIDERX Starter"
+  THIS["customerName"] = "Awa Diarra"
+  THIS["accountStatus"] = "Verified"
+  THIS["balance"] = "125 000"
+  THIS["currency"] = "XOF"
+  stateSet("lastAction", "Ready")
 </script>

@@ -1,0 +1,36 @@
+<template>
+  <container margin="16,8,16,24" padding="16,16,16,16" background-color="#1F2328" shape.type="roundedRectangle" shape.radius="20">
+    <column cross-axis-alignment="stretch">
+      <row main-axis-alignment="spaceBetween">
+        <column cross-axis-alignment="start" main-axis-size="min">
+          <text style.font-size="16" style.font-weight="700" color="#FFFFFF">
+            Host integration
+          </text>
+          <text style.font-size="12" color="#CBD5E1">
+            Configure custom host functions and native views locally.
+          </text>
+        </column>
+        <ion-icon data="phone-portrait-outline" color="#FE9800" size="28"></ion-icon>
+      </row>
+      <divider color="#334155" height="16" thickness="1"></divider>
+      <check-box name="offlineMode" initial-value="false" active-color="#FE9800">
+        <text slot="title" style.font-size="14" color="#FFFFFF">Enable offline fallback</text>
+        <text slot="subtitle" style.font-size="12" color="#CBD5E1">Use local bundle assets when the host is offline.</text>
+      </check-box>
+      <row main-axis-alignment="spaceBetween">
+        <outlined-button foreground-color="#FFFFFF" border-color="#FE9800">
+          <text>Open docs</text>
+          <script name="click_event">
+            alert("Open central docs from the IDE or browser")
+          </script>
+        </outlined-button>
+        <text-button foreground-color="#FE9800">
+          <text>Inspect metadata</text>
+          <script name="click_event">
+            alert("See .host-functions.json and .native-views.json")
+          </script>
+        </text-button>
+      </row>
+    </column>
+  </container>
+</template>

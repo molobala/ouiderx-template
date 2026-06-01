@@ -1,1 +1,47 @@
-[]
+[
+  {
+    "name": "scanQrCode",
+    "description": "Ask the host app to open its QR scanner and return the scanned text.",
+    "params": [],
+    "returns": {
+      "type": "text",
+      "description": "Scanned QR payload."
+    }
+  },
+  {
+    "name": "trackEvent",
+    "description": "Send a product analytics event to the target host app.",
+    "params": [
+      {
+        "name": "event",
+        "type": "text",
+        "required": true,
+        "description": "Stable event name."
+      },
+      {
+        "name": "properties",
+        "type": "generic",
+        "required": false,
+        "description": "Optional event metadata."
+      }
+    ],
+    "returns": {
+      "type": "void"
+    }
+  },
+  {
+    "name": "openSupportChat",
+    "description": "Open the host app support surface with an optional context object.",
+    "params": [
+      {
+        "name": "context",
+        "type": "generic",
+        "required": false,
+        "description": "Screen or transaction context for support."
+      }
+    ],
+    "returns": {
+      "type": "void"
+    }
+  }
+]

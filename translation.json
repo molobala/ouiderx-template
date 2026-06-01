@@ -1,1 +1,18 @@
-{}
+{
+  "en": {
+    "app.title": "OUIDERX Starter",
+    "dashboard.balance": "Available balance",
+    "action.send": "Send",
+    "action.pay": "Pay",
+    "action.topup": "Top up",
+    "action.help": "Help"
+  },
+  "fr": {
+    "app.title": "Starter OUIDERX",
+    "dashboard.balance": "Solde disponible",
+    "action.send": "Envoyer",
+    "action.pay": "Payer",
+    "action.topup": "Recharger",
+    "action.help": "Aide"
+  }
+}

@@ -1,0 +1,35 @@
+<template>
+  <container margin="16,16,16,8" padding="18,18,18,18" background-color="#FE9800" shape.type="roundedRectangle" shape.radius="22">
+    <column cross-axis-alignment="stretch">
+      <row main-axis-alignment="spaceBetween">
+        <column cross-axis-alignment="start" main-axis-size="min">
+          <text style.font-size="13" color="#FFF4E0">
+            Welcome back
+          </text>
+          <text style.font-size="24" style.font-weight="700" color="#FFFFFF">
+            {{INPUT['customerName']}}
+          </text>
+        </column>
+        <image-view url="${localAsset('assets/logo.png')}" width="48" height="48" fit="cover" shape="avatar"></image-view>
+      </row>
+
+      <container margin.top="20" padding="14,14,14,14" background-color="#FFFFFF" shape.type="roundedRectangle" shape.radius="16">
+        <row main-axis-alignment="spaceBetween">
+          <column cross-axis-alignment="start" main-axis-size="min">
+            <text style.font-size="12" color="#6B7280">
+              Available balance
+            </text>
+            <text style.font-size="28" style.font-weight="800" color="#1F2328">
+              {{INPUT['balance']}} {{INPUT['currency']}}
+            </text>
+          </column>
+          <container padding="8,10,8,10" background-color="#E7F7ED" shape.type="roundedRectangle" shape.radius="999">
+            <text style.font-size="12" color="#118044">
+              {{INPUT['accountStatus']}}
+            </text>
+          </container>
+        </row>
+      </container>
+    </column>
+  </container>
+</template>

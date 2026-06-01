@@ -1,0 +1,47 @@
+<template>
+  <container margin="16,8,16,8">
+    <column cross-axis-alignment="stretch">
+      <text style.font-size="16" style.font-weight="700" color="#1F2328">
+        Quick actions
+      </text>
+      <row main-axis-alignment="spaceBetween">
+        <container padding="12,12,12,12" background-color="#FFFFFF" shape.type="roundedRectangle" shape.radius="18">
+          <column main-axis-size="min">
+            <ion-icon data="send-outline" color="#FE9800" size="26"></ion-icon>
+            <text style.font-size="12">Send</text>
+          </column>
+          <script name="click_event">
+            stateSet("lastAction", "Send")
+          </script>
+        </container>
+        <container padding="12,12,12,12" background-color="#FFFFFF" shape.type="roundedRectangle" shape.radius="18">
+          <column main-axis-size="min">
+            <ion-icon data="card-outline" color="#1F7A8C" size="26"></ion-icon>
+            <text style.font-size="12">Pay</text>
+          </column>
+          <script name="click_event">
+            stateSet("lastAction", "Pay")
+          </script>
+        </container>
+        <container padding="12,12,12,12" background-color="#FFFFFF" shape.type="roundedRectangle" shape.radius="18">
+          <column main-axis-size="min">
+            <ion-icon data="download-outline" color="#4F46E5" size="26"></ion-icon>
+            <text style.font-size="12">Top up</text>
+          </column>
+          <script name="click_event">
+            stateSet("lastAction", "Top up")
+          </script>
+        </container>
+        <container padding="12,12,12,12" background-color="#FFFFFF" shape.type="roundedRectangle" shape.radius="18">
+          <column main-axis-size="min">
+            <ion-icon data="chatbubble-ellipses-outline" color="#475569" size="26"></ion-icon>
+            <text style.font-size="12">Help</text>
+          </column>
+          <script name="click_event">
+            alert("Connect this action to a host support function")
+          </script>
+        </container>
+      </row>
+    </column>
+  </container>
+</template>

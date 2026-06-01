@@ -1,11 +1,43 @@
-
 [
-    {
-        "name": "SuguBalance",
-        "properties": [
-            {"name": "showTelco", "type": "boolean", "default": false},
-            {"name": "showOmy", "type": "boolean", "default": false},
-            {"name": "format", "type": "text"}
-        ]
-    }
+  {
+    "name": "HostAccountBadge",
+    "properties": [
+      {
+        "name": "label",
+        "type": "text",
+        "required": true,
+        "placeholder": "Verified"
+      },
+      {
+        "name": "tone",
+        "type": "select",
+        "default": "success",
+        "values": ["success", "warning", "danger"]
+      },
+      {
+        "name": "compact",
+        "type": "boolean",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "HostLoyaltySummary",
+    "properties": [
+      {
+        "name": "customerId",
+        "type": "text",
+        "required": true
+      },
+      {
+        "name": "showProgress",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "name": "emptyState",
+        "type": "component"
+      }
+    ]
+  }
 ]

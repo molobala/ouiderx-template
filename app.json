@@ -1,15 +1,24 @@
 {
-    "name": "Example",
-    "version": "1.0.0",
-    "entry": "index.omc",
-    "translation": "translation.json",
-    "dependencies": {
+  "name": "OUIDERX Starter",
+  "description": "A production-oriented native mini app starter with dashboard, forms, assets, host metadata, and reusable components.",
+  "version": "1.0.0",
+  "entry": "index.omc",
+  "translation": "translation.json",
+  "template": {
+    "id": "ouiderx-starter",
+    "format": "ouiderx",
+    "category": "starter",
+    "tags": ["dashboard", "forms", "native", "host-functions"]
+  },
+  "dependencies": {},
+  "assets": [
+    {
+      "from": "src/assets",
+      "to": "assets"
     },
-    "assets": [
-        {
-            "from": "src/assets",
-            "to": "assets"
-        },
-        { "from": "translation.json", "to": "./translation.json"}
-    ]
+    {
+      "from": "translation.json",
+      "to": "./translation.json"
+    }
+  ]
 }

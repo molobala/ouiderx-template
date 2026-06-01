@@ -2,7 +2,7 @@ node_modules/
 dist/
 .angular/
 .vscode/
-testing/public/app/
+.testing/
 
 .DS_Store
 Thumbs.db

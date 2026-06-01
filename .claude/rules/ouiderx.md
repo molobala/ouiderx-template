@@ -15,3 +15,4 @@ paths:
 - Prefer `<text>Hello</text>` and `<text>{{_DATA['label']}}</text>`; do not put text content in the `data` attribute for new text nodes.
 - Use `localAsset(...)` for bundled assets.
 - Keep custom host function metadata in `.host-functions.json`.
+- Preserve this sample as a useful starter template with dashboard, forms, assets, host metadata, and reusable components.
