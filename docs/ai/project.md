@@ -13,5 +13,13 @@ Important files:
 
 Compiler output is native JSON, not a WebView JavaScript bundle.
 
-Use `localAsset("assets/name.png")` for files copied from `src/assets` into the bundle.
+For text nodes, write inner text directly:
 
+```xml
+<text>Hello</text>
+<text>{{_DATA['label']}}</text>
+```
+
+Do not put text content in the `data` attribute for new text nodes unless maintaining legacy code that already uses that form.
+
+Use `localAsset("assets/name.png")` for files copied from `src/assets` into the bundle.
