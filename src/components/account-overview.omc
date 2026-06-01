@@ -3,31 +3,31 @@
     <column cross-axis-alignment="stretch">
       <row main-axis-alignment="spaceBetween">
         <text style.font-size="16" style.font-weight="700" color="#1F2328">
-          Account overview
+          %account_overview
         </text>
-        <controller update.on="stateChange" update.keys="lastAction">
+        <controller update.on="stateChange" update.keys="lastActionKey">
           <text style.font-size="12" color="#FE9800">
-            {{stateGet('lastAction')}}
+            {{translate(stateGet('lastActionKey'))}}
           </text>
         </controller>
       </row>
       <divider color="#EEF0F4" height="16" thickness="1"></divider>
       <list-tile bottom-line="true">
         <ion-icon slot="leading" data="wallet-outline" color="#FE9800" size="22"></ion-icon>
-        <text slot="title" style.font-size="14" style.font-weight="700">Primary wallet</text>
-        <text slot="subtitle" style.font-size="12" color="#64748B">Used for instant payments</text>
-        <text slot="trailing" style.font-size="13" color="#118044">Active</text>
+        <text slot="title" style.font-size="14" style.font-weight="700">%account_primary_wallet</text>
+        <text slot="subtitle" style.font-size="12" color="#64748B">%account_primary_wallet_subtitle</text>
+        <text slot="trailing" style.font-size="13" color="#118044">%status_active</text>
       </list-tile>
       <list-tile bottom-line="true">
         <ion-icon slot="leading" data="shield-checkmark-outline" color="#118044" size="22"></ion-icon>
-        <text slot="title" style.font-size="14" style.font-weight="700">Security status</text>
-        <text slot="subtitle" style.font-size="12" color="#64748B">Biometry and PIN enabled</text>
-        <text slot="trailing" style.font-size="13" color="#118044">Good</text>
+        <text slot="title" style.font-size="14" style.font-weight="700">%account_security_status</text>
+        <text slot="subtitle" style.font-size="12" color="#64748B">%account_security_subtitle</text>
+        <text slot="trailing" style.font-size="13" color="#118044">%status_good</text>
       </list-tile>
       <list-tile>
         <ion-icon slot="leading" data="cloud-done-outline" color="#4F46E5" size="22"></ion-icon>
-        <text slot="title" style.font-size="14" style.font-weight="700">Sync</text>
-        <text slot="subtitle" style.font-size="12" color="#64748B">Local bundle ready for host preview</text>
+        <text slot="title" style.font-size="14" style.font-weight="700">%account_sync</text>
+        <text slot="subtitle" style.font-size="12" color="#64748B">%account_sync_subtitle</text>
         <ion-icon slot="trailing" data="chevron-forward" color="#94A3B8" size="18"></ion-icon>
       </list-tile>
     </column>

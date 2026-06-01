@@ -2,43 +2,43 @@
   <container margin="16,8,16,8">
     <column cross-axis-alignment="stretch">
       <text style.font-size="16" style.font-weight="700" color="#1F2328">
-        Quick actions
+        %quick_actions
       </text>
       <row main-axis-alignment="spaceBetween">
         <container padding="12,12,12,12" background-color="#FFFFFF" shape.type="roundedRectangle" shape.radius="18">
           <column main-axis-size="min">
             <ion-icon data="send-outline" color="#FE9800" size="26"></ion-icon>
-            <text style.font-size="12">Send</text>
+            <text style.font-size="12">%action_send</text>
           </column>
           <script name="click_event">
-            stateSet("lastAction", "Send")
+            stateSet("lastActionKey", "action_send")
           </script>
         </container>
         <container padding="12,12,12,12" background-color="#FFFFFF" shape.type="roundedRectangle" shape.radius="18">
           <column main-axis-size="min">
             <ion-icon data="card-outline" color="#1F7A8C" size="26"></ion-icon>
-            <text style.font-size="12">Pay</text>
+            <text style.font-size="12">%action_pay</text>
           </column>
           <script name="click_event">
-            stateSet("lastAction", "Pay")
+            stateSet("lastActionKey", "action_pay")
           </script>
         </container>
         <container padding="12,12,12,12" background-color="#FFFFFF" shape.type="roundedRectangle" shape.radius="18">
           <column main-axis-size="min">
             <ion-icon data="download-outline" color="#4F46E5" size="26"></ion-icon>
-            <text style.font-size="12">Top up</text>
+            <text style.font-size="12">%action_topup</text>
           </column>
           <script name="click_event">
-            stateSet("lastAction", "Top up")
+            stateSet("lastActionKey", "action_topup")
           </script>
         </container>
         <container padding="12,12,12,12" background-color="#FFFFFF" shape.type="roundedRectangle" shape.radius="18">
           <column main-axis-size="min">
             <ion-icon data="chatbubble-ellipses-outline" color="#475569" size="26"></ion-icon>
-            <text style.font-size="12">Help</text>
+            <text style.font-size="12">%action_help</text>
           </column>
           <script name="click_event">
-            alert("Connect this action to a host support function")
+            alert(translate("support_hint"))
           </script>
         </container>
       </row>

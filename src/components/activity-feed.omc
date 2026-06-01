@@ -3,27 +3,27 @@
     <column cross-axis-alignment="stretch">
       <row main-axis-alignment="spaceBetween">
         <text style.font-size="16" style.font-weight="700" color="#1F2328">
-          Recent activity
+          %activity_title
         </text>
         <ion-icon data="filter-outline" color="#64748B" size="20"></ion-icon>
       </row>
       <list-tile bottom-line="true">
         <ion-icon slot="leading" data="arrow-up-circle-outline" color="#DC2626" size="24"></ion-icon>
-        <text slot="title" style.font-size="14" style.font-weight="700">Merchant payment</text>
-        <text slot="subtitle" style.font-size="12" color="#64748B">Today at 10:20</text>
+        <text slot="title" style.font-size="14" style.font-weight="700">%activity_merchant_payment</text>
+        <text slot="subtitle" style.font-size="12" color="#64748B">%activity_today_1020</text>
         <text slot="trailing" style.font-size="13" color="#DC2626">-2 500</text>
       </list-tile>
       <list-tile bottom-line="true">
         <ion-icon slot="leading" data="arrow-down-circle-outline" color="#118044" size="24"></ion-icon>
-        <text slot="title" style.font-size="14" style.font-weight="700">Cash-in</text>
-        <text slot="subtitle" style.font-size="12" color="#64748B">Yesterday</text>
+        <text slot="title" style.font-size="14" style.font-weight="700">%activity_cash_in</text>
+        <text slot="subtitle" style.font-size="12" color="#64748B">%activity_yesterday</text>
         <text slot="trailing" style.font-size="13" color="#118044">+25 000</text>
       </list-tile>
       <list-tile>
         <ion-icon slot="leading" data="time-outline" color="#4F46E5" size="24"></ion-icon>
-        <text slot="title" style.font-size="14" style.font-weight="700">Scheduled transfer</text>
-        <text slot="subtitle" style.font-size="12" color="#64748B">Friday</text>
-        <text slot="trailing" style.font-size="13" color="#4F46E5">Pending</text>
+        <text slot="title" style.font-size="14" style.font-weight="700">%activity_scheduled_transfer</text>
+        <text slot="subtitle" style.font-size="12" color="#64748B">%activity_friday</text>
+        <text slot="trailing" style.font-size="13" color="#4F46E5">%status_pending</text>
       </list-tile>
     </column>
   </container>

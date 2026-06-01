@@ -4,30 +4,30 @@
       <row main-axis-alignment="spaceBetween">
         <column cross-axis-alignment="start" main-axis-size="min">
           <text style.font-size="16" style.font-weight="700" color="#FFFFFF">
-            Host integration
+            %host_integration
           </text>
           <text style.font-size="12" color="#CBD5E1">
-            Configure custom host functions and native views locally.
+            %host_integration_subtitle
           </text>
         </column>
         <ion-icon data="phone-portrait-outline" color="#FE9800" size="28"></ion-icon>
       </row>
       <divider color="#334155" height="16" thickness="1"></divider>
       <check-box name="offlineMode" initial-value="false" active-color="#FE9800">
-        <text slot="title" style.font-size="14" color="#FFFFFF">Enable offline fallback</text>
-        <text slot="subtitle" style.font-size="12" color="#CBD5E1">Use local bundle assets when the host is offline.</text>
+        <text slot="title" style.font-size="14" color="#FFFFFF">%enable_offline_fallback</text>
+        <text slot="subtitle" style.font-size="12" color="#CBD5E1">%offline_fallback_subtitle</text>
       </check-box>
       <row main-axis-alignment="spaceBetween">
         <outlined-button foreground-color="#FFFFFF" border-color="#FE9800">
-          <text>Open docs</text>
+          <text>%open_docs</text>
           <script name="click_event">
-            alert("Open central docs from the IDE or browser")
+            alert(translate("open_docs_hint"))
           </script>
         </outlined-button>
         <text-button foreground-color="#FE9800">
-          <text>Inspect metadata</text>
+          <text>%inspect_metadata</text>
           <script name="click_event">
-            alert("See .host-functions.json and .native-views.json")
+            alert(translate("inspect_metadata_hint"))
           </script>
         </text-button>
       </row>

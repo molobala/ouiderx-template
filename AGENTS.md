@@ -33,6 +33,8 @@ Do not add or edit a project-local `.testing` Angular preview app. Web preview i
 - Pass data to child components through `<script name="input">...</script>` and read it with `INPUT[...]` in the child.
 - Components are isolated by default. Use `isolated="false"` only when parent and child intentionally share `stateSet(...)` / `stateGet(...)`.
 - Prefer `<text>Hello</text>` and `<text>{{_DATA['label']}}</text>`; do not put text content in the `data` attribute for new text nodes.
+- Use flat snake_case translation keys, not dotted keys. Static text should use `%translation_key`; dynamic or interpolated text should use `{{translate('translation_key')}}`.
+- Store translation keys in shared state when the value is user-facing, then render with `translate(stateGet(...))`.
 - Use `localAsset("assets/name.png")` for bundled assets.
 - Do not treat `Icon` or `IonIcon` values as assets.
 - Do not invent native tags or props; inspect schemas and installed modules first.

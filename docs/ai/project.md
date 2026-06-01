@@ -39,14 +39,39 @@ Inside `hero-card.omc`:
 
 ```xml
 <text>{{INPUT['customerName']}}</text>
+<text>{{translate(INPUT['accountStatusKey'])}}</text>
 ```
 
 For shared state display:
 
 ```xml
-<controller update.on="stateChange" update.keys="lastAction">
-  <text>{{stateGet('lastAction')}}</text>
+<controller update.on="stateChange" update.keys="lastActionKey">
+  <text>{{translate(stateGet('lastActionKey'))}}</text>
 </controller>
+```
+
+Translations use flat snake_case keys in `translation.json`. Do not use dotted keys.
+
+For static text, use `%translation_key`:
+
+```xml
+<text>%account_overview</text>
+<button text="%submit_transfer"></button>
+```
+
+For interpolated or Mevento-computed text, call `translate(...)`:
+
+```xml
+<text>{{translate('hero_welcome')}}</text>
+<text>{{translate(INPUT['accountStatusKey'])}}</text>
+```
+
+When shared state represents user-facing text, store the translation key, not the rendered label:
+
+```xml
+<script name="click_event">
+  stateSet("lastActionKey", "action_send")
+</script>
 ```
 
 For text nodes, write inner text directly:

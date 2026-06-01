@@ -3,31 +3,31 @@
     <form id="transferForm">
       <column cross-axis-alignment="stretch">
         <text style.font-size="16" style.font-weight="700" color="#1F2328">
-          Transfer form
+          %transfer_form
         </text>
         <text style.font-size="12" color="#64748B">
-          Shows native inputs, selection controls, and Mevento actions.
+          %transfer_form_subtitle
         </text>
-        <text-field name="beneficiary" label-text="Beneficiary phone" hint="+223..." inputmode="phone" max-length="16" debounce="250"></text-field>
-        <text-field name="amount" label-text="Amount" hint="0" inputmode="currency"></text-field>
+        <text-field name="beneficiary" label-text="%form_beneficiary_phone" hint="+223..." inputmode="phone" max-length="16" debounce="250"></text-field>
+        <text-field name="amount" label-text="%form_amount" hint="0" inputmode="currency"></text-field>
         <dropdown
           name="source"
-          label-text="Source"
+          label-text="%form_source"
           initial-value="wallet"
-          items='[{"label":"Primary wallet","value":"wallet"},{"label":"Bank card","value":"card"},{"label":"Partner account","value":"partner"}]'>
+          items='[{"label":"%account_primary_wallet","value":"wallet"},{"label":"%payment_bank_card","value":"card"},{"label":"%payment_partner_account","value":"partner"}]'>
         </dropdown>
         <segment name="speed" initial-value="instant" background-color="#F1F5F9">
-          <segment-button value="instant" label="Instant"></segment-button>
-          <segment-button value="scheduled" label="Scheduled"></segment-button>
+          <segment-button value="instant" label="%transfer_instant"></segment-button>
+          <segment-button value="scheduled" label="%transfer_scheduled"></segment-button>
         </segment>
         <switch name="saveBeneficiary" initial-value="true">
-          <text slot="title" style.font-size="14">Save beneficiary</text>
-          <text slot="subtitle" style.font-size="12" color="#64748B">Keep this contact for future payments.</text>
+          <text slot="title" style.font-size="14">%save_beneficiary</text>
+          <text slot="subtitle" style.font-size="12" color="#64748B">%save_beneficiary_subtitle</text>
         </switch>
-        <button text="Submit transfer" fill="solid" background-color="#FE9800" foreground-color="#FFFFFF">
+        <button text="%submit_transfer" fill="solid" background-color="#FE9800" foreground-color="#FFFFFF">
           <script name="click_event">
-            stateSet("lastAction", "Transfer submitted")
-            alert("Transfer submitted from OUIDERX")
+            stateSet("lastActionKey", "state_transfer_submitted")
+            alert(translate("transfer_submitted_alert"))
           </script>
         </button>
       </column>

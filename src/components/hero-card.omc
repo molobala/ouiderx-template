@@ -4,7 +4,7 @@
       <row main-axis-alignment="spaceBetween">
         <column cross-axis-alignment="start" main-axis-size="min">
           <text style.font-size="13" color="#FFF4E0">
-            Welcome back
+            %hero_welcome
           </text>
           <text style.font-size="24" style.font-weight="700" color="#FFFFFF">
             {{INPUT['customerName']}}
@@ -17,7 +17,7 @@
         <row main-axis-alignment="spaceBetween">
           <column cross-axis-alignment="start" main-axis-size="min">
             <text style.font-size="12" color="#6B7280">
-              Available balance
+              %dashboard_balance
             </text>
             <text style.font-size="28" style.font-weight="800" color="#1F2328">
               {{INPUT['balance']}} {{INPUT['currency']}}
@@ -25,7 +25,7 @@
           </column>
           <container padding="8,10,8,10" background-color="#E7F7ED" shape.type="roundedRectangle" shape.radius="999">
             <text style.font-size="12" color="#118044">
-              {{INPUT['accountStatus']}}
+              {{translate(INPUT['accountStatusKey'])}}
             </text>
           </container>
         </row>
